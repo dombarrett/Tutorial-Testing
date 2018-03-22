@@ -122,6 +122,7 @@ We don’t think about this when we look at Monet’s painting “Water Lilies�
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Monet_-_Seerosen_1906.jpg" width="700">
 https://en.wikipedia.org/wiki/File:Monet_-_Seerosen_1906.jpg
 
+<br><br>
 Yak shaving.
 
 
