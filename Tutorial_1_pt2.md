@@ -641,26 +641,82 @@ var color4;
 //an array to hold all of the colors
 var colors;
 
+//text we are looking at
 var displayText;
 
+//our microphone
 var mic;
 
 /*
+You can use this:
 "+
 "
+
+or this:
+'+
+'
+
+To break up long strings of text, in order to make things more readable
+They will work exactly the same, but they will fit all on a visible screen
+	instead of flying off into the endless whitespace of the right hand side.
+
 */
 
-var textScript = ['You probably could just say “lalalalala” into the microphone and test the functionality of the code just fine. But you don’t. For whatever reason you decide to speak the words on the screen aloud, like a speech. Perhaps even if just under your breath. At first this spares you from feeling funny about appearing strange, blurting out some rant into the multicolored mess on the screen. However, you start to wonder how much your soft muttering is really affecting the height values of the squares being drawn.',
-                  'You draw closer to your microphone, hoping for more visible results without risking any more of your ego. Now closer to the screen, you notice you might be making some difference. Though getting closer to the microphone has also brought your face closer to the screen as well. The previously invisible black grid in between the pixels vaguely starts to emerge.',
-                  'You are squinting now, face lit up by the neon slurry of the screen. There is no escaping it, you’ll need to speak louder. Gradually, you raise your voice. There is a noticeable difference. Or maybe that is just in your head. You are expecting the changes to happen so maybe you are more primed to think they are happening (even when they are not). The pauses between words seem to help. Abruptly raising your voice at the beginning of each word seems to make the static pop to life. A kind of strange rhythm emerges in your speaking, bouncing up and down between muttering and recognizable words.',
-                  '“Thats me,” you think to yourself. Perhaps a bit of a journey, but yes, you feel like the statement is right. Out of your mouth, into the microphone, through the hardware, into the operating system, flying through layers of drivers and system utilities, landing into your browser. Its you. You are looking at yourself, in a way. Certainly a strange mirror. But they aren’t really your words. Should you write your own?',
-                 	'You were a shy child. Well, at first. Shy until certain occasions came up where your family and school mates were surprised to see you perform so boldly in front of so many people. Book reports, dance recitals, school plays. But after these outbursts, you would return to a more introverted and calm disposition. As these social surprises became more common, the unexpected became expected and people thought of you differently. You had changed, though not entirely sure where or when. Or how much.',
-                 	'Eventually you stopped performing from scripts and started making your own things. Perhaps some music. A painting. Bad poetry. Oh wow, so much bad poetry. In fact, as you became an adult you started looking back at all the things you made with a little bit of embarrassment. Its ok, though. You have to start somewhere. Practice makes perfect. But now you always consider how what you make is going to look, going to sound. Why make something you’ll be unhappy with tomorrow? Best to think a bit first. Especially when so many people you know are making and doing so many amazing things.',
-                 	'Of course, you have indulged this habit a bit too much lately. Thinking only a bit turned into thinking a lot. A whole lot. Inspiration comes in fits and starts, usually away from your gear and during busy occasions where you can’t spare a moment. You DO want to write your own words into the tutorial. But you simply don’t have any good ideas. You want to be able to write something amazing, something real. Something you wouldn’t feel strange about speaking out loud, at full volume.',
-                 	'“Maybe later,” you think. A moment passes. “I’ll come back to it,” you half heartedly insist. You’re tired, anyways. And the flashing colors and static have made your eyes a little sore. How long have you been squinting for? What time is it? You roll your shoulders backwards and straighten out your spine. Aching back and neck, again. You close your eyes for an extended moment, seeing the multicolored snow dancing on the inside of your eyelids.',
-                 	'“That’s enough for now,” you confidently decide. You eat a snack while watching some TV, then take a shower before going to sleep. You dream of filling up ice trays with cubes that take the shape of words and letters you can’t quite make out. Tray after tray after tray you pour water and load into the frosty machine. But your freezer doesn’t seem to run out of space. The water from the sink is never turned off, and becomes a singular source of white noise. A moving, rushing blankness. It feels good. You delve into a deeper, dreamless sleep.',
+var textScript = ['You probably could just say “lalalalala” into the microphone and test the functionality '+
+                  'of the code just fine. But you don’t. For whatever reason you decide to speak the words '+
+                  'on the screen aloud, like a speech. Perhaps even if just under your breath. At first this '+
+                  'spares you from feeling funny about appearing strange, blurting out some rant into the '+
+                  'multicolored mess on the screen. However, you start to wonder how much your soft muttering'+
+                  ' is really affecting the height values of the squares being drawn.',
+                  'You draw closer to your microphone, hoping for more visible results without risking any '+
+                  'more of your ego. Now closer to the screen, you notice you might be making some difference.'+
+                  ' Though getting closer to the microphone has also brought your face closer to the screen as '+
+                  'well. The previously invisible black grid in between the pixels vaguely starts to emerge.',
+                  'You are squinting now, face lit up by the neon slurry of the screen. There is no escaping it,'+
+                  ' you’ll need to speak louder. Gradually, you raise your voice. There is a noticeable'+
+                  ' difference. Or maybe that is just in your head. You are expecting the changes to happen'+
+                  ' so maybe you are more primed to think they are happening (even when they are not). The'+
+                  ' pauses between words seem to help. Abruptly raising your voice at the beginning of each'+
+                  ' word seems to make the static pop to life. A kind of strange rhythm emerges in your'+
+                  ' speaking, bouncing up and down between muttering and recognizable words.',
+                  '“Thats me,” you think to yourself. Perhaps a bit of a journey, but yes, you feel like the '+
+                  'statement is right. Out of your mouth, into the microphone, through the hardware, into the '+
+                  'operating system, flying through layers of drivers and system utilities, landing into your '+
+                  'browser. Its you. You are looking at yourself, in a way. Certainly a strange mirror. But '+
+                  'they aren’t really your words. Should you write your own?',
+                 	'You were a shy child. Well, at first. Shy until certain occasions came up where your family '+
+                  'and school mates were surprised to see you perform so boldly in front of so many people. '+
+                  'Book reports, dance recitals, school plays. But after these outbursts, you would return to '+
+                  'a more introverted and calm disposition. As these social surprises became more common, the '+
+                  'unexpected became expected and people thought of you differently. You had changed, though '+
+                  'not entirely sure where or when. Or how much.',
+                 	'Eventually you stopped performing from scripts and started making your own things. Perhaps '+
+                  'some music. A painting. Bad poetry. Oh wow, so much bad poetry. In fact, as you became an '+
+                  'adult you started looking back at all the things you made with a little bit of embarrassment.'+
+                  ' Its ok, though. You have to start somewhere. Practice makes perfect. But now you always '+
+                  'consider how what you make is going to look, going to sound. Why make something you’ll be'+
+                  ' unhappy with tomorrow? Best to think a bit first. Especially when so many people you know'+
+                  ' are making and doing so many amazing things.',
+                 	'Of course, you have indulged this habit a bit too much lately. Thinking only a bit turned'+
+                  ' into thinking a lot. A whole lot. Inspiration comes in fits and starts, usually away from'+
+                  ' your gear and during busy occasions where you can’t spare a moment. You DO want to write'+
+                  ' your own words into the tutorial. But you simply don’t have any good ideas. You want to be'+
+                  ' able to write something amazing, something real. Something you wouldn’t feel strange about'+
+                  ' speaking out loud, at full volume.',
+                 	'“Maybe later,” you think. A moment passes. “I’ll come back to it,” you half heartedly insist.'+
+                  ' You’re tired, anyways. And the flashing colors and static have made your eyes a little sore.'+
+                  ' How long have you been squinting for? What time is it? You roll your shoulders backwards'+
+                  ' and straighten out your spine. Aching back and neck, again. You close your eyes for an'+
+                  ' extended moment, seeing the multicolored snow dancing on the inside of your eyelids.',
+                 	'“That’s enough for now,” you confidently decide. You eat a snack while watching some TV, then'+
+                  ' take a shower before going to sleep. You dream of filling up ice trays with cubes that take'+
+                  ' the shape of words and letters you can’t quite make out. Tray after tray after tray you pour'+
+                  ' water and load into the frosty machine. But your freezer doesn’t seem to run out of space.'+
+                  ' The water from the sink is never turned off, and becomes a singular source of white noise.'+
+                  ' A moving, rushing blankness. It feels good. You delve into a deeper, dreamless sleep.',
                 	'end of the array',];
 
+//our current location in the script
 var scriptProgress;
 
 
@@ -673,54 +729,70 @@ function setup() {
   // By default, it does not .connect() (to the computer speakers)
   mic.start();
   
-  color1 = color(255,255,255);
-  color2 = color(0,255,255);
-  color3 = color(255,0,255);
-  color4 = color(255,255,0);
+  color1 = color(255,255,255);	//white
+  color2 = color(0,255,255);		//cyan
+  color3 = color(255,0,255);		//magenta
+  color4 = color(255,255,0);		//yellow
   
-  equalColors = [color1,color2,color3,color4];
+  equalColors = [color1,color2,color3,color4];	//equal chances of picking 4 colors
   
   mostlyColor2 = [color1,color2,color2,color2,
             			color2,color2,color2,color2,
-            			color2,color2,color3,color4];
+            			color2,color2,color3,color4];	//more likely color 2 is picked
   
   mostlyColor3 = [color1,color2,color3,color3,
            				color3,color3,color3,color3,
-            			color3,color3,color3,color4];
+            			color3,color3,color3,color4];	//more likely color 3 is picked
   
   mostlyColor4 = [color1,color2,color3,color4,
             			color4,color4,color4,color4,
-            			color4,color4,color4,color4];
+            			color4,color4,color4,color4];	//more likely color 4 is picked
   
-  colors = equalColors;
+  
+  colors = equalColors;		//we'll start with the first option
   
   
   //textScript = ['part1','part2','part3','part4'];
+  
+  //starting in the array position zero, first part of our script
  	scriptProgress = 0;
   
+  //put the current script as the text that will be displayed
   displayText = textScript[scriptProgress];
 } 
 
-function draw() { 
+function draw() {
+  //background has four arguments: the fourth is alpha
+  //having this not be 255 allows for bluring effect
   background(75,75,75,25);
   
+  //get the level of the microphone volume and re-map the values
   var vol = mic.getLevel();
   var h = map(vol, 0, 1, 0, 20);
   
+  //for testing mic values in the console
   //console.log(vol + " " + h);
   
+  //five hundred times per frame
   for(i=0;i<500;i++){
-  	//fill(color1);
+  	//We create a square
+    
+    //that pulls randomly from our currently selected colors array
   	fill(random(colors));
     noStroke();
+    
+    //placed in a random location,
+    	//with a height determined by the mapped volume value
   	rect(random(width),random(height),10,h+1);
   }
 
+  //put the current script as the text that will be displayed
   displayText = textScript[scriptProgress];
   
+  //display that text
   fill(255);
   textSize(18);
-  textFont('Helvetica');
+  textFont('Helvetica');	//because helvetica
   stroke(255);
   noStroke();
   //strokeWeight(1);
@@ -731,15 +803,25 @@ function draw() {
 function keyPressed(){
   if(keyCode===37){
     console.log("left key detected");
+    //if the left key is pressed
+    
+    //and we are at the beginning of our script
     if(scriptProgress==0){
+      //loop back around to the last script entry
       scriptProgress=textScript.length-1;
     }
     else{
+      //otherwise, just go back one in the script array
       scriptProgress--;}
   }
   if(keyCode===39){
     console.log("right key detected");
+    //if the right key is pressed
+    
+    //go to the next location in the script array
     scriptProgress++;
+    //run modulo on the script progress variable, ensuring
+    	//that we never run over the maximum length of the array
     scriptProgress=scriptProgress%textScript.length;
   }
   
@@ -748,30 +830,29 @@ function keyPressed(){
     colors = equalColors;
     scriptProgress++;
     scriptProgress=scriptProgress%textScript.length;
-  
+  	//like the right button, but setting a specific color option
   }
   if(key==2){
     console.log("keypressed 2");
     colors = mostlyColor2;
    	scriptProgress++;
     scriptProgress=scriptProgress%textScript.length;
-  
+  	//like the right button, but setting a specific color option
   }
   if(key==3){
     console.log("keypressed 3");
     colors = mostlyColor3;
     scriptProgress++;
     scriptProgress=scriptProgress%textScript.length;
-  
+  	//like the right button, but setting a specific color option
   }
   if(key==4){
     console.log("keypressed 4");
     colors = mostlyColor4;
     scriptProgress++;
     scriptProgress=scriptProgress%textScript.length;
-  
+  	//like the right button, but setting a specific color option
   }
   
 }
-
 ```
