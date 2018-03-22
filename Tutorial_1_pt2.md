@@ -119,7 +119,7 @@ And so, Claude Monet bought a roll of that cloth-type gaffer tape and an absurdl
 
 We don’t think about this when we look at Monet’s painting “Water Lilies”, but maybe we should. 
 
-<img src="https://en.wikipedia.org/wiki/File:Monet_-_Seerosen_1906.jpg" width="700">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Monet_-_Seerosen_1906.jpg" width="700">
 https://en.wikipedia.org/wiki/File:Monet_-_Seerosen_1906.jpg
 
 Yak shaving.
