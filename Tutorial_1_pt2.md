@@ -61,7 +61,13 @@ Reference. Use it!
 
 ## The plot thickens
 
-I’m currently using the alpha version of the online p5js editor. I uploaded the file into my sketch directory. However, when I clicked on the file, I didn’t see any of the text inside of it. All blank. What gives? To be honest, I don’t know. I had seen some behavior like this before, and knew it might be a while before the glitch was fixed. I simply opened up a copy of the file on my machine, and pasted the contents into the blank text file inside of the online editor.
+I’m currently using the alpha version of the online p5js editor. I uploaded the file into my sketch directory. However, when I clicked on the file, I didn’t see any of the text inside of it. All blank. What gives?
+
+<img src="https://raw.githubusercontent.com/dombarrett/Tutorial-Testing/master/lesson2_images/blank_txt_strats.png" width=700>
+
+To be honest, I don’t know. I had seen some behavior like this before, and knew it might be a while before the glitch was fixed. I simply opened up a copy of the file on my machine, and pasted the contents into the blank text file inside of the online editor.
+
+<img src="https://raw.githubusercontent.com/dombarrett/Tutorial-Testing/master/lesson2_images/pasted_txt_strats.png" width=700>
 
 Then I output the entire files contents into a console log to make sure it worked, and up came… HTML? My txt file didn’t have any HTML in it. Something had gone wrong. I saw “amazon” and “aws” tucked away inside of the HTML. This must be where the online editor is hosting the txt file, and things had gone screwy on the backend. Another glitch.
 
