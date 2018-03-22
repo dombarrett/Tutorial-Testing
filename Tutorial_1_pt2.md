@@ -38,7 +38,7 @@ https://alpha.editor.p5js.org/dbarrett/sketches/ryXGukwFz
 
 <img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson2_images/oblique_strats_screenshot.png" width=400>
 
-##A little story on this sketch
+## A little story on this sketch
 
 I had found the text file for Oblique Strategies online. I put it into a txt file, knowing that p5js would be able to parse it. But I don’t know how it works off the top of my head, so I went to:
 
