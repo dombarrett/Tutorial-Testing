@@ -180,7 +180,7 @@ Lets flex our muscles a bit, and perhaps establish a bit of a rapport with one a
 
 I know, I know. Maybe it is better to think about this as a stretching exercise. You aren’t a total beginner, but we just need to get a little flexible and start the blood flowing.
 
-I would like you to take the program from the end of part one and add this example microphone code into it. How?
+I would like you to take the program from the end of part one ([found here](https://github.com/dombarrett/Tutorial-Testing/blob/master/Tutorial_1.md)) and add this example microphone code into it. How?
 * The mic variable should be created outside both functions because it is a global variable. 
 * Assigning the mic variable as a new AudioIn(), and the start() method should go in the setup function.
 * Get the mic level by assigning it to a new variable called ‘vol’,
@@ -549,7 +549,7 @@ Should operate the same way as this line of code
 if (keyCode === LEFT_ARROW) {
 ```
 
-There are several other constant names that should work this way. You can kind them in the p5js reference. Which you have open… *right*?! Right.
+There are several other constant names that should work this way. You can find them in the p5js reference. Which you have open… *right*?! Right.
 
 If you want to use these constants instead, feel free to do so. I like to keep my mind in ASCII land, just in case I decide I want to use a keyboard key that doesn’t have one of these constants. The “Home” key, for instance. So lonely, the Home key. Depending on the keyboard you are using, you might not even have one. And I don’t get in impression that people use it very much, even when it is available.
 
@@ -629,7 +629,7 @@ What if, when you write your script, you want to have a passage about diving und
 
 But then you go to perform your piece at a tech poetry reading in Chelsea, and the vibe is all different than you expected. The bright blue and yellow suddenly strikes you as a bit gauche. And water paired with blue, isn’t that a little on the nose? It all felt so different rehearsing at home. Magenta, that's the one for this room. A bit darker, more mellow. But warm. A playful, dim romance. Press 3.
 
-These are all programming questions and technical scenarios. If you want your art to seem less mechanical, if you want your performances to have more room for improvisation, consider introducing these little differences to identical functionalities. Walking “naturally” is a repeating of steps, but the speed, stride and direction can all vary in little ways. Even with something a simple as words, colors and shapes, we can introduce little bits of our artistic gait.
+These are all programming questions and technical scenarios. If you want your art to seem less mechanical, if you want your performances to have more room for improvisation, consider introducing these little differences to identical functionalities. The act of walking “naturally” is a repeating of steps, but the speed, stride and direction can all vary in little ways. Even with something a simple as words, colors and shapes, we can introduce little bits of our artistic gait.
 
 ## Make your own
 
