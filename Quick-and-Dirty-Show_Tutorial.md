@@ -207,9 +207,9 @@ function youth(people){
 
 function adolesence(people){
   if(!people.diameter){//if we aren't dealing with a You class
-    									//the "!" in this if statement means "not"
-    									//Same type of results as above, we're just defining things in the negative
-    									//Which sounds very adolesent to me
+		     //the "!" in this if statement means "not"
+		     //Same type of results as above, we're just defining things in the negative
+		     //Which sounds very adolesent to me
     	console.log("this isn't you, is it?");
      return}
   else{
