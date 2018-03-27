@@ -32,7 +32,7 @@ X, Y, diameter, speed. This is the start of our Ball constructor. And in Javascr
 This can be seen again as we continue on to the verbs. These are things that each instance of the object can do: it exists, it moves.
 
 ```
-this.move = function() {
+  this.move = function() {
     this.x += this.speed;
   };
 
