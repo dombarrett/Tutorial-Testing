@@ -69,7 +69,7 @@ These are not the feelings I see in usual object constructors. Usually we see tr
 Below is a piece that is a representation of my life, as I feel about it in this moment. Feel free to take a look at the code to see how the object is created, used, and then modified by various functions.
 
 **Curious Activity:**
-If you would like to tell your own life story, take a look at how the diameter, speed, color, outsideColor, and ourWalls properties are changed. Feel free to make your own version. Let me know if you’d like to share it with me to use for my documentation, or simply just describe the thoughts behind your life objects to someone else here.
+If you would like to tell your own life story, take a look at how the diameter, speed, color, outsideColor, and ourWalls properties are used. Feel free to make your own version by changing the variables to suit your story. Let me know if you’d like to share it with me to use for my documentation, or simply just describe the thoughts behind your life objects to someone else here.
 
 **Creative Activity:**
 Or, change the whole narrative! Isn’t there more to life than just age? Why is time described as going from left to right? Do you feel like more of a square than a circle? Feel free to modify, remove, or add as much as you need to tell your life story.
