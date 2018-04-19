@@ -293,6 +293,8 @@ Output Ports:
 ```
 
 ### What is MIDI?
+<img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson4_images/midi_logo.png" width=300>
+
 https://en.wikipedia.org/wiki/MIDI
 
 MIDI stands for Musical Instrument Digital Interface. You may have heard about it in different contexts. Maybe you think of old school Nintendo soundtracks as “MIDI music”. Or perhaps there is a dusty MIDI keyboard in your parent’s closet. You may have seen a MIDI cable, or downloaded a MIDI file.
