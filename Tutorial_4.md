@@ -318,6 +318,8 @@ https://support.apple.com/guide/audio-midi-setup/set-up-midi-devices-ams875bae1e
 
 Do a spotlight search on your machine for the application “Audio MIDI Setup”
 
+<img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson4_images/audio_midi_setup_search.png" width=400>
+<img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson4_images/audio_midi_setup_icon.png" width=100>
 
 Inside of Audio MIDI Setup go to Window>MIDI Studio. Double click on the IAC Driver box. A properties window will open.
 
