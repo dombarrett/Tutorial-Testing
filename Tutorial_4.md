@@ -473,7 +473,7 @@ Now run this sketch. In the console log you will hopefully see the successful in
 If everything is working, you’ll just see a pale square. Keep that sketch running in one window. 
 
 
-[image]
+<img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson4_images/midi_color-bounce_window-1.png" width=800>
 
 
 Now go back to your MIDI enabled bouncing ball sketch. Run that as well, where you can see both windows. Now click to create a ball.
@@ -481,7 +481,7 @@ Now go back to your MIDI enabled bouncing ball sketch. Run that as well, where y
 
 
 
-[image]
+<img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson4_images/midi_color-bounce_window-2.png" width=800>
 
 
 
