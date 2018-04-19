@@ -498,6 +498,11 @@ The great thing about MIDI Buses is that lots of things can hop on the bus, send
 
 Try opening three browser windows of the random color sketch. Four. Five. Fill the screen with small versions of them. Plug in a monitor, drag over another instance of the sketch and full screen it. They’ll all receive the MIDI messages from the ball sketch, all at the same time.
 
+<img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson4_images/midi_color-bounce_window-2.png" width=800>
+
+
+
+
 ### But that’s not all
 
 There are all kinds of different programs that can work with MIDI messages. You have just made a browser based interface that can interact with them. Simplistic, perhaps. But certainly a start. Imagine being able to divide a collaboration up into two parts: you work on a visual half while a musician works on the audio half.
