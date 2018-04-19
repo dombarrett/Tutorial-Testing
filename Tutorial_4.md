@@ -323,7 +323,7 @@ Do a spotlight search on your machine for the application “Audio MIDI Setup”
 
 Inside of Audio MIDI Setup go to Window>MIDI Studio. Double click on the IAC Driver box. A properties window will open.
 
-
+<img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson4_images/macOS_midi_system_settings.png" width=400>
 
 Click on the Plus icon to add a “MIDI Bus”. You can come back here to add more later, but for now one is fine.
 
@@ -333,7 +333,7 @@ https://www.tobias-erichsen.de/software/loopmidi.html
 
 It functions and feels very similar to the MacOS’s MIDI setup. Once running, you can add or remove MIDI buses using the “+” and “-” buttons in the lower left hand corner.
 
-
+<img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson4_images/loopMIDI_screenshot.png" width=400>
 
 Once you have made a virtual MIDI port, run our bouncing ball program again. You should see something like this in your console log:
 
@@ -511,23 +511,23 @@ https://www.ableton.com/en/trial/
 When you install Ableton and open it, you will be presented with a window that looks like this:
 
 
-
+<img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson4_images/ableton_first_session_view_1.png" width=600>
 
 
 If you then go to File>Preferences, you’ll see different settings for how Live works. If you click on the “Link MIDI” tab on the left, you will see the current MIDI setup for the program.
 
-
+<img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson4_images/ableton_midi_preferences.png" width=600>
 
 Oh, look! It’s the MIDI bus I made! Click “On” for Track and Remote for both Input and Output MIDI Ports. This will allow Live to receive MIDI messages that are sent to this MIDI bus, and also send messages out to that MIDI bus.
 
 
 Once you have your MIDI bus enabled inside of Ableton, you will want to add a MIDI instrument. If you use the browser on the left hand side of the Ableton screen, you can select Instruments>Simpler>Piano & Keys and find a piano instrument that you like. Click and drag it to the work area to the left, onto the “MIDI 1” instrument slot. Now the slot will be re-named to whatever instrument you chose, like “Simplest Piano”.
 
-
+<img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson4_images/ableton_added_instrument.png" width=600>
 
 Now, to get our Simplest Piano to be able to listen to our p5 sketch, we will need to make sure that the specific instrument is listening to the MIDI bus we have made for ourselves. For every MIDI instrument in Ableton, you will see a “MIDI From” section with a drop down menu. On your new piano, choose MIDI From your new MIDI bus (in my case right now, “IAC Bus 1”).
 
-
+<img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson4_images/ableton_midi_track_setting.png" width=600>
 
 Now when you use your original ball bouncing sketch, the MIDI instrument should detect the “bounces”. Out of the browser, into Ableton Live. Amazing. But you can see in our ball’s bounce function that it is just sending the same note, “C5” over and over again. Lets replicate the functionality of the pre-made piano sound we were using before.
 
@@ -608,7 +608,7 @@ If you now use the ball sketch, you’ll hear different notes being played by th
 
 When we send a lot of note on events without corresponding note off events, sometimes our MIDI enabled software can act a little funny. A note on that stays past its welcome might be called a “stuck” or “hung” note. With the bouncing ball sketch, it didn’t really matter. In Ableton, it might result in unpleasant sound or glitches. If you are experiencing a stuck note in Ableton, click the “stop” button at the top of the program.
 
-
+<img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson4_images/ableton_stop_button.png" width=400>
 
 ### Stopping and Softness
 
