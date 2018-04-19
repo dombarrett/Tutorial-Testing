@@ -351,16 +351,16 @@ Send and receive… what?
 
 A single MIDI port can send lots of things, but to keep things simple we’re going to focus on only a few specific elements.
 
-Notes
+### Notes
 A piano keyboard has different keys you can play. A musical score can have notes printed on a staff. A MIDI message can tell a MIDI instrument to play a note in the same way. There are two kinds of notes: a note on and a note off.
 
-Velocity
+### Velocity
 Imagine hitting that piano key as hard as you could. Imagine a violinist tenderly pulling their bow across the strings of their violin. A single note can be hard, or soft. Generally, this affects the volume of a particular note. Every note is paired with a velocity. In many instances where a velocity is not given, the default maximum value (127), is used.
 
-Control Changes
+### Control Changes
 Control Change messages are usually referred to as CC messages. This is a kind of “general purpose” communication. Imagine a synthesizer with lots of knobs and sliders. Maybe they don’t send note messages, or the velocity of the notes. But they could control other aspects of the sound or the function of the system. Things like bending the pitch of a note can be assigned to these types of controls.
 
-Channels
+### Channels
 Within any given MIDI connection, we might be sending note ons, note offs, all kinds of velocities and throwings all sorts of CC messages around. Imagine all of that communication going through a MIDI cable, and then multiply it by 16. There are 16 channels available on any given MIDI connection. These channels can be dedicated to things like multiple instruments. For example, a piano on channel 1, channel 5 could be guitar, and usually channel 10 is drums. However, this isn’t set in stone and the channels can go to wherever you want.
 
 
@@ -383,7 +383,7 @@ Now we’re going to save this sketch, and set it aside for a moment.
 
 
 
-
+-----
 
 
 
@@ -496,7 +496,7 @@ The great thing about MIDI Buses is that lots of things can hop on the bus, send
 
 Try opening three browser windows of the random color sketch. Four. Five. Fill the screen with small versions of them. Plug in a monitor, drag over another instance of the sketch and full screen it. They’ll all receive the MIDI messages from the ball sketch, all at the same time.
 
-But that’s not all
+### But that’s not all
 
 There are all kinds of different programs that can work with MIDI messages. You have just made a browser based interface that can interact with them. Simplistic, perhaps. But certainly a start. Imagine being able to divide a collaboration up into two parts: you work on a visual half while a musician works on the audio half.
 
@@ -560,13 +560,13 @@ This means a ball in the middle will be played at a rate of approximately 2, whe
 Luckily, each specific note value has a corresponding number. The lowest note C0 can also be referred to as note number 0, and the highest note is G10 is 127.
 
 
-127
+### 127
 
 127. We will see this number a lot when we are working with MIDI. Why? A MIDI event can be sent as a byte, which is 8 bits. The way the MIDI standard is implemented, the first bit is used to identify the kind of MIDI message the byte describes. This leaves 7 bits left to describe a value. Considering a binary counting system, 2 to the power of 7 is 128. Meaning the range of a sent MIDI value is 0-127, since we will start at zero instead of one.
 
 You don’t need to know all this. There are plenty of great resources online if you want to get into the nitty gritty of how MIDI messages are created at the lowest level. But for our purposes, not necessary. Just didn’t want you to think we picked 127 out of thin air. And you’ll be seeing it come up repeatedly when working with MIDI.
 
-A new map() for a new territory
+### A new map() for a new territory
 
 Our old playback rate was mapping our ball’s position on a scale from 0.01 to 4.0. Now we need a new map for using MIDI values instead.
 
@@ -608,7 +608,7 @@ When we send a lot of note on events without corresponding note off events, some
 
 
 
-Stopping and Softness
+### Stopping and Softness
 
 Sending a corresponding note off message would be a good idea, just to keep things clean. While we’re at it, we can set a note velocity (a “volume” of sorts). And that way that WebMidi.js works, will also require us to set our MIDI channel.
 
@@ -686,10 +686,10 @@ I propose we take a technical break, and pick up an artistic task.
 
 Go into your back catalog of work, or re-create an example from one of your previous programming tutorials, and “MIDI”-fy it. Make a MIDI version of and old piece. Incorporate the WebMidi.js library and the Note and Velocity MIDI messages in the way that I’ve done to the bouncing ball sketch. This can be a good technical review for you to do on your own, without explicit guidance:
 
-Add the library
-Initialize it in your program’s setup
-Setup to listen for incoming MIDI notes, and/or
-Send MIDI notes
+* Add the library
+* Initialize it in your program’s setup
+* Setup to listen for incoming MIDI notes, and/or
+* Send MIDI notes
 
 There will be other useful programming life lessons, as well. You’ll look through your old code and wonder what you were thinking. How does this thing even run, anyways? Get reacquainted with your program, and this time write detailed code comments before you forget again. Your future you will thank your past you.
 
