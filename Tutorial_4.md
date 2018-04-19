@@ -323,7 +323,7 @@ Do a spotlight search on your machine for the application “Audio MIDI Setup”
 
 Inside of Audio MIDI Setup go to Window>MIDI Studio. Double click on the IAC Driver box. A properties window will open.
 
-<img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson4_images/macOS_midi_system_settings.png" width=400>
+<img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson4_images/macOS_midi_system_settings.png" width=800>
 
 Click on the Plus icon to add a “MIDI Bus”. You can come back here to add more later, but for now one is fine.
 
@@ -511,7 +511,7 @@ https://www.ableton.com/en/trial/
 When you install Ableton and open it, you will be presented with a window that looks like this:
 
 
-<img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson4_images/ableton_first_session_view_1.png" width=600>
+<img src="https://github.com/dombarrett/Tutorial-Testing/blob/master/lesson4_images/ableton_first_session_view_1.png" width=1000>
 
 
 If you then go to File>Preferences, you’ll see different settings for how Live works. If you click on the “Link MIDI” tab on the left, you will see the current MIDI setup for the program.
